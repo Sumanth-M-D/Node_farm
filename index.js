@@ -8,36 +8,6 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                     FILE SYSTEM
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
-
-// // synchronous way
-// const text = readFileSync("./txt/input.txt", "utf-8");
-
-// const textOut = `This is what we know about avacado: ${text}. \nCreated on ${Date.now()}`;
-
-// writeFileSync("./txt/output.txt", textOut, "UTF-8");
-
-// // Asynchronous Way
-// readFile("./txt/start.txt", "utf-8", (err, data1) => {
-//   if (err) throw err;
-
-//   readFile(`./txt/${data1}.txt`, "UTF-8", (err, data2) => {
-//     if (err) throw err;
-
-//     readFile("./txt/append.txt", "UTF-8", (err, data3) => {
-//       if (err) throw err;
-//       console.log(data3);
-
-//       writeFile("./txt/final.txt", `${data2}\n${data3}`, "UTF-8", (err) => {
-//         if (err) throw err;
-//         console.log("Your file has been saved");
-//       });
-//     });
-//   });
-// });
-
-/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                         SERVER (HTTP)
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
@@ -110,6 +80,6 @@ const server = http.createServer((req, res) => {
    }
 });
 
-server.listen(8000, '127.0.0.1', () => {
+server.listen(8000, () => {
    console.log('Listenining on port 8000');
 });
